@@ -1,0 +1,34 @@
+.bg-main {
+    background-color: #3b5d50 !important;
+    position: relative;
+    padding: 170px 0;
+    z-index: -1;
+}
+
+.wrap {
+    max-width: 450px;
+}
+
+.fw-boldest {
+    font-weight: 900 !important;
+}
+
+.fs-mega {
+    font-size: 54px !important;
+}
+
+.couch {
+    position: absolute;
+    width: 51%;
+    right: 6%;
+    top: 11%;
+}
+
+.text-subHeader {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fs-small {
+    font-size: 14px;
+    line-height: 28px;
+}

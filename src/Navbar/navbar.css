@@ -1,0 +1,15 @@
+.link-color {
+    color: #adb5bd !important;
+}
+
+.fw-slightly-bold {
+    font-weight: 500 !important;
+}
+
+.fw-marginally-bold {
+    font-weight: 600 !important;
+}
+
+.navBar {
+    position: absolute !important;
+}
