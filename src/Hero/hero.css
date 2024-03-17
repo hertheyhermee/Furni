@@ -1,7 +1,7 @@
 .bg-main {
     background-color: #3b5d50 !important;
     position: relative;
-    padding: 170px 0;
+    padding: 130px 0;
     z-index: -1;
 }
 
@@ -21,7 +21,7 @@
     position: absolute;
     width: 51%;
     right: 6%;
-    top: 11%;
+    top: 5%;
 }
 
 .text-subHeader {
@@ -31,4 +31,69 @@
 .fs-small {
     font-size: 14px;
     line-height: 28px;
+}
+
+@media screen and (max-width:996px) {
+    .bg-main {
+        padding: 40px 0;
+    }
+    .wrap {
+        max-width: 100%;
+    }
+    .fs-mega {
+        font-size: 35px !important;
+    }
+    .fs-small {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .couch {
+        position: relative;
+        width: 110%;
+        margin-left: -8%;
+        top: 17%;
+    }
+}
+
+@media screen and (max-width:768px)  {
+    .bg-main {
+        background-color: #3b5d50 !important;
+        position: relative;
+        overflow-x: hidden;
+        padding: 30px 0;
+        z-index: -1;
+    }
+
+    .hero {
+        margin-top: -1px !important;
+        /* border: none !important; */
+    }
+    
+    .wrap {
+        max-width: 450px;
+    }
+    
+    .fw-boldest {
+        font-weight: 900 !important;
+    }
+    
+    .fs-mega {
+        font-size: 28px !important;
+    }
+    .fs-small {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    
+    .couch {
+        position: relative;
+        width: 200%;
+        left: 6%;
+        top: 17%;
+    }
+    
+    .text-subHeader {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
 }
