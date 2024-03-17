@@ -2,6 +2,14 @@ import "./hero.css";
 import Couch from "../../public/images/couch.png";
 import Button from "../Button";
 
+const Dots = ({ className }) => {
+  return (
+    <span className={className} style={{}}>
+      .
+    </span>
+  );
+};
+
 const Hero = ({ header, subHeader }) => {
   return (
     <div className="hero bg-main">
@@ -28,8 +36,13 @@ const Hero = ({ header, subHeader }) => {
                     text={"explore"}
                     backgroundColor={"transparent"}
                     color={"#fff"}
-                    border={"1px solid rgba(255, 255, 255, 0.5)"}
+                    border={"1px solid #ffffff7f"}
                   />
+                  <div className="dot-container d-flex">
+                    {[...Array(72)].map((_, index) => {
+                      return <Dots key={index} className={"dot mb-0"} />;
+                    })}
+                  </div>
                   <img src={Couch} width className="couch" alt="" />
                 </div>
               ) : null}

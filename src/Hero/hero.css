@@ -24,6 +24,27 @@
     top: 5%;
 }
 
+.dot-container {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 310px;
+    height: 250px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+    gap: 21px;
+}
+
+.dot {
+    font-size: 45px;
+    line-height: 0;
+    color: white;
+    opacity: .4;
+}
+
 .text-subHeader {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -52,6 +73,14 @@
         width: 110%;
         margin-left: -8%;
         top: 17%;
+    }
+    .dot-container {
+        width: 272px;
+        gap: 18px;
+        top: 30%;
+    }
+    .dot {
+        font-size: 40px;
     }
 }
 
@@ -87,13 +116,28 @@
     
     .couch {
         position: relative;
-        width: 200%;
+        width: 190%;
         left: 6%;
-        top: 17%;
+        margin-top: 80px;
+    }
+
+    .dot-container {
+        width: 250px;
+        height: 200px;
+        gap: 10px;
+        top: 30%;
+        right: -12%;
     }
     
     .text-subHeader {
         color: rgba(255, 255, 255, 0.5);
     }
     
+}
+
+@media screen and (max-width:440px) {
+    .dot-container {
+        right: -25%;
+        top: 40%;
+    }
 }
