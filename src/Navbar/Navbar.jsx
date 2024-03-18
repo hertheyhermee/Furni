@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -85,7 +85,7 @@ const Navbar = () => {
               </li>
             ))}
             <li className="px-3 px-md-0 py-3">
-              <Link to="">
+              <Link to="/cart">
                 <FaShoppingCart size={25} color="white" />
               </Link>
             </li>

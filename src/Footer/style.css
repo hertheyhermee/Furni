@@ -1,0 +1,146 @@
+.newsletter {
+    color: #3B5D50;
+    font-size: 18px;
+    vertical-align: baseline;
+    /* border: 1px solid #000; */
+}
+
+.subscribe input {
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    border: 1px solid #ced4da !important;
+    color: #212529;
+}
+
+.subscribe input:focus {
+    outline: none;
+    border-color: #3b5d50 !important;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sofa-wrapper {
+    position: relative;
+    /* border: 1px solid #000; */
+}
+
+.sofa {
+    position: absolute;
+    max-width: 380px;
+    height: auto;
+    top: -215px;
+    right: 0px;
+}
+
+.send {
+    background-color: #3b5d50;
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.footer-title {
+    color: #3B5D50;
+    margin: 30px 0 !important;
+}
+
+.furni-footer p {
+    color: #6A6A6A;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 95%;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #dce5e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: .2s all;
+    margin-top: 10px;
+}
+
+.socials span a {
+    text-decoration: none;
+    color: #3b5d50;
+    transition: .3s all;
+}
+
+.socials span:hover {
+    background-color: #3B5D50 !important;
+}
+
+.socials span:hover a {
+    color: #fff;
+}
+
+.list-wrap {
+    padding-top: 75px;
+}
+
+.footer ul li {
+    /* border: 1px solid; */
+    padding: 7px;
+}
+
+.footer ul li a {
+    color: #2F2F2F;
+    text-decoration: none;
+    font-size: 14px !important;
+    transition: .2s all;
+}
+
+.footer ul li a:hover {
+    opacity: .6;
+}
+
+.copyright p {
+    color: #6A6A6A;
+    font-size: 14px;
+}
+
+.terms a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #2F2F2F;
+}
+
+@media screen and (max-width:992px) {
+    .newsletter-wrapper {
+        flex-direction: column-reverse !important;
+    }
+
+    .con-two {
+        height: 220px;
+    }
+
+    .furni-footer p {
+        max-width: 100%;
+    }
+
+    .terms-conditions {
+        justify-content: center !important;
+    }
+
+    .copyright p {
+        text-align: center;
+        line-height: 2;
+    }
+}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {
+    .subscribe input {
+        /* width: 50% !important; */
+    }
+}

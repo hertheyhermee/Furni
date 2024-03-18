@@ -5,7 +5,10 @@ import Shop from "./components/Shop";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
+import ContactUs from "./components/ContactUs";
+import Cart from "./components/cart";
 import "bootstrap/dist/css/bootstrap.css";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -18,7 +21,10 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
