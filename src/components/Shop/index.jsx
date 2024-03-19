@@ -5,15 +5,7 @@ import product1 from "../../../public/images/product-1.png";
 import product2 from "../../../public/images/product-2.png";
 import product3 from "../../../public/images/product-3.png";
 
-import Hero from "../../Hero/Hero";
-
 const Shop = () => {
-    return ( 
-        <div>
-            <Hero header={'shop'} />
-        </div>
-     );
-}
  
   return (
     <div className="shop-section">

@@ -3,11 +3,7 @@
 }
 
 .crafted-with-excellent-material {
-
-}
-
-.craft {
-    /* max-width: 80%; */
+    padding: 150px 0 !important;
 }
 
 .crafted h2 {
@@ -20,8 +16,5 @@
     color: #6a6a6a !important;
 }
 
-@media screen and (max-width:992px) {
-    .craft {
-        max-width: 100%;
-    }
-}
+/* @media screen and (max-width:992px) {
+} */
