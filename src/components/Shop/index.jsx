@@ -1,6 +1,10 @@
+import Hero from "../../Hero/Hero";
+
 const Shop = () => {
     return ( 
-        <div>Shop</div>
+        <div>
+            <Hero header={'shop'} />
+        </div>
      );
 }
  

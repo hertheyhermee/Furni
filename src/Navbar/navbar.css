@@ -74,7 +74,7 @@ ul {
 
 div.ul-active {
     height: 340px;
-    border-bottom: 1px solid #adb5bd;
+    border-bottom: 1px solid #ffffff43;
 }
 
 ul li {
@@ -85,7 +85,7 @@ ul li {
 
 ul li .nav-two {
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 nav .nav_link {

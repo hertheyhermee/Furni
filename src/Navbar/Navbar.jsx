@@ -78,7 +78,7 @@ const Navbar = () => {
               <li key={navItem.link}>
                 <Link
                   to={navItem.path}
-                  className={`link-color hover text-capitalize px-3 px-sm-0 nav-two}`}
+                  className={`link-color hover text-capitalize px-3 px-sm-0 nav-two`}
                 >
                   {navItem.link}
                 </Link>
