@@ -17,7 +17,7 @@ const Home = () => {
             "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique."
           }
         />
-        <div className="container crafted-with-excellent-material py-5">
+        <div className="container crafted-with-excellent-material">
           <div className="row">
             <div className="col-12 col-lg-3 crafted">
               <div className="craft">
