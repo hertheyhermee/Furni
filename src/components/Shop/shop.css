@@ -1,0 +1,23 @@
+.shops-item {
+    text-align: center;
+    display: block;
+    position: relative;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+
+.shops_section {
+    padding: 112px 0 192px;
+    background-color: #eff2f1;
+}
+.shops-item img {
+    margin-bottom: 30px; 
+}
+.shops-item h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+.shops-item strong {
+    font-weight: 800;
+    font-size: 18px;
+}
