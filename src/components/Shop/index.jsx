@@ -33,14 +33,14 @@ const Shop = () => {
               <ProductItem 
                 productImg = {product2}
                 productName = "Nordic Chair"
-                productPrice = "50.00"
+                productPrice = "78.00"
                />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-5">
               <ProductItem 
                 productImg = {product3}
                 productName = "Nordic Chair"
-                productPrice = "50.00"
+                productPrice = "43.00"
                />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-5">
@@ -61,14 +61,14 @@ const Shop = () => {
               <ProductItem 
                 productImg = {product2}
                 productName = "Nordic Chair"
-                productPrice = "50.00"
+                productPrice = "78.00"
                />
             </div>
             <div className="col-12 col-md-6 col-lg-3 mb-5">
               <ProductItem 
                 productImg = {product3}
                 productName = "Nordic Chair"
-                productPrice = "50.00"
+                productPrice = "43.00"
                />
             </div>
           </div>
