@@ -2,19 +2,91 @@
     background-color: #eff2f1;
 }
 
-.crafted-with-excellent-material {
-    padding: 150px 0 !important;
+.modern-design {
+    padding: 100px 0 !important;
 }
 
-.crafted h2 {
-    color: #2f2f2f !important;
+.modern-design .head-text {
+    line-height: 2;
+    margin-bottom: 2em;
 }
 
-.crafted p {
-    color: #2f2f2f !important;
-    font-size: 14px;
-    color: #6a6a6a !important;
+.modern-design p {
+    color: #6a6a6a;
+    font-size: 14px !important;
 }
 
-/* @media screen and (max-width:992px) {
-} */
+.modern-design .points {
+    margin-left: 16px;
+    position: relative;
+}
+
+.modern-design .points::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #6a6a6a;
+    border-radius: 50%;
+    top: 7px;
+    left: -16px;
+}
+
+.modern-design .imageWrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.modern-design .imageWrapper .grid-one {
+    border-radius: 20px;
+    width: 66%;
+}
+
+.modern-design .imageWrapper .grid-two {
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    width: 31%;
+}
+
+.modern-design .imageWrapper .grid-three {
+    border-radius: 30px;
+    position: absolute;
+    width: 52%;
+    bottom: -20%;
+    right: 0;
+}
+
+.modern-design .imageWrapper .green-dot {
+    position: absolute;
+    left: -14%;
+    top: -14%;
+    z-index: -1;
+}
+
+@media screen and (max-width:992px) {
+    .modern-design .header-column {
+        margin-top: 170px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .modern-design .imageWrapper {
+        padding: 0 11px;
+    }
+    
+    .modern-design .imageWrapper .green-dot {
+        left: -24.5% !important;
+        top: -30%;
+    }
+    
+    .modern-design .imageWrapper .grid-two {
+        right: 2%;
+        width: 29%;
+    }
+    .modern-design .imageWrapper .grid-three {
+        right: 2%;
+        width: 50%;
+    }
+}

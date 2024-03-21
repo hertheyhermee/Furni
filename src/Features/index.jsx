@@ -1,8 +1,5 @@
 import "./style.css";
 
-
-
-
 const Features = ({ icon, title, details, }) => {
   return (
     <>

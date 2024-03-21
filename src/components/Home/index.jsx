@@ -1,10 +1,12 @@
+import "./home.css";
 import Button from "../../Button";
 import Hero from "../../Hero/Hero";
-import ProductItem from "../../Product-item";
-import NoridcChair from "../../../public/images/product-1.png";
-import KruzoAeroChair from "../../../public/images/product-2.png";
-import ErgonomicChair from "../../../public/images/product-3.png";
-import "./home.css";
+import WhyChooseUs from "../../WhyChooseUs";
+import ImgGridOne from "/images/img-grid-1.jpg";
+import ImgGridTwo from "/images/img-grid-2.jpg";
+import ImgGridThree from "/images/img-grid-3.jpg";
+import GreenDot from "/images/dots-green.svg";
+import CraftedWithExcellentMaterial from "../../Crafted";
 
 const Home = () => {
   return (
@@ -17,49 +19,74 @@ const Home = () => {
             "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique."
           }
         />
-        <div className="container crafted-with-excellent-material">
-          <div className="row">
-            <div className="col-12 col-lg-3 crafted">
-              <div className="craft">
-                <h2 className="mb-4">Crafted with excellent material.</h2>
-                <p className="mb-4">
-                  Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                  aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
-                  tristique.
-                </p>
-                <Button
-                  text="explore"
-                  color="white"
-                  backgroundColor="#2f2f2f"
-                  border="#2f2f2f"
+        <CraftedWithExcellentMaterial />
+        <WhyChooseUs />
+        <div className="container modern-design">
+          <div className="row mx-0">
+            <div className="col-12 col-lg-7">
+              <div className="imageWrapper">
+                <img src={GreenDot} className="green-dot" alt="" />
+                <img src={ImgGridOne} className="img-fluid grid-one" alt="" />
+                <img src={ImgGridTwo} className="img-fluid grid-two" alt="" />
+                <img
+                  src={ImgGridThree}
+                  className="img-fluid grid-three"
+                  alt=""
                 />
               </div>
             </div>
-            <div className="col-12 col-lg-9">
-              <div className="row ">
-                <div className="col-12 col-md-4">
-                  <ProductItem
-                    productImg={NoridcChair}
-                    productName={"Nordic chair"}
-                    productPrice={50}
-                  />
+            <div className="col-12 col-lg-5 px-lg-4 px-4 header-column">
+              <div>
+                <h2 className="mb-4">
+                  We Help You Make Modern Interior Design
+                </h2>
+                <p className="head-text">
+                  Donec facilisis quam ut purus rutrum lobortis. Donec vitae
+                  odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                  Aliquam vulputate velit imperdiet dolor tempor tristique.
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada
+                </p>
+                <div className="row">
+                  <div className="col-6">
+                    <p className="points">
+                      Donec vitae odio quis nisl dapibus malesuada
+                    </p>
+                  </div>
+                  <div className="col-6">
+                    <p className="points">
+                      Donec vitae odio quis nisl dapibus malesuada
+                    </p>
+                  </div>
+                  <div className="col-6">
+                    <p className="points">
+                      Donec vitae odio quis nisl dapibus malesuada
+                    </p>
+                  </div>
+                  <div className="col-6">
+                    <p className="points">
+                      Donec vitae odio quis nisl dapibus malesuada
+                    </p>
+                  </div>
                 </div>
-                <div className="col-12 col-md-4">
-                  <ProductItem
-                    productImg={KruzoAeroChair}
-                    productName={"Kruzo Aero Chair"}
-                    productPrice={50}
-                  />
-                </div>
-                <div className="col-12 col-md-4">
-                  <ProductItem
-                    productImg={ErgonomicChair}
-                    productName={"Ergonomic chair"}
-                    productPrice={50}
-                  />
-                </div>
+                <Button
+                  className="mt-4"
+                  text="exlpore"
+                  backgroundColor="#2f2f2f"
+                  border="#2f2f2f"
+                  color="#fff"
+                />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="container read-more-about-chair">
+          <div className="row">
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="nordic"></div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-4"></div>
+            <div className="col-12 col-md-6 col-lg-4"></div>
           </div>
         </div>
       </div>
