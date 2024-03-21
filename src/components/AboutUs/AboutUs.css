@@ -4,10 +4,11 @@
     font-size: 14px;
     
 }
-.why-choose-us p {
+.why-choose-us p ,.why-choose-us span {
     color: #6a6a6a;
     /* font-size: 14px; */
 }
+
 
 .why-choose-us .whyChooseUsImage {
     position: relative;
