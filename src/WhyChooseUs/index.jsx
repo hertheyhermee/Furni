@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
               <div className="col-6 col-md-6">
                 <Features
                   icon={<FiShoppingBag size={35} />}
-                  title={"Fast & Free Shipping"}
+                  title={"Easy to Shop"}
                   details={
                     "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate."
                   }
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
               <div className="col-6 col-md-6">
                 <Features
                   icon={<HiOutlineSupport size={35} />}
-                  title={"Fast & Free Shipping"}
+                  title={"24/7 Support"}
                   details={
                     "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate."
                   }
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               <div className="col-6 col-md-6">
                 <Features
                   icon={<AiOutlineRetweet size={35} />}
-                  title={"Fast & Free Shipping"}
+                  title={"Hassle Free Returns"}
                   details={
                     "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate."
                   }

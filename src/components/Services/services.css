@@ -1,0 +1,10 @@
+.services-section {
+    padding: 112px 0;
+    background-color: #eff2f1;
+}
+
+@media screen and (max-width:576px) {
+    .crafted {
+        padding: 0px 10px;
+    }
+}
