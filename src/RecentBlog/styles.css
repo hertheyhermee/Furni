@@ -1,0 +1,18 @@
+.recent a {
+    text-decoration: none;
+    color: #2f2f2f;
+
+}
+.recent h3 {
+    font-size: 16px;
+    color: #6a6a6a;
+}
+
+.recent span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.recent .recent-data {
+    padding: 0 15px;
+}
