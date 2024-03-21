@@ -74,7 +74,7 @@ const AboutUs = () => {
       <div className="team-section">
         <div className="container">
         <div className="row mb-5">
-          <div className="col-lg-5 mx-auto text-center">
+          <div className="col-lg-5 mx-auto text-center header">
             <h2 className="team-section-header">Our Team</h2>
           </div>
         </div>
