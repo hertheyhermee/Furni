@@ -1,0 +1,64 @@
+.profile {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+.profile-details {
+    padding: 0 21.2%;
+    text-align: center;
+}
+
+.profile-img {
+    margin-top: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2f2f2f;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.profile-text {
+    font-size: 18px;
+    color: #6a6a6a;
+    line-height: 32px;
+}
+
+.profile-title {
+    color: #6a6a6a;
+    font-size: 14px;
+}
+
+#carouselExampleControls button .first {
+    background-color: rgba(59, 93, 80, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .2s all;
+}
+
+.first:hover {
+    background-color: #3b5d50 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px !important;
+  height: 20px !important;
+  color: #2f2f2f !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
