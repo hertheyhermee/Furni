@@ -21,55 +21,55 @@ const AboutUs = () => {
       <WhyChooseUs />
       <div className="team-section">
         <div className="container">
-          <div className="row mb-5">
-            <div className="col-lg-5 mx-auto text-center">
+          <div className="row">
+            <div className="col-lg-5 mx-auto text-center header mb-4">
               <h2 className="team-section-header">Our Team</h2>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <Team
-                teamImage={Person1}
-                teamName={"Lawson Arnold"}
-                teamPosition={"CEO, Founder, Atty."}
-                teamDetails={
-                  "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
-                }
-                teamMore={"Learn More"}
-              />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <Team
-                teamImage={Person2}
-                teamName={"Jeremy Walker"}
-                teamPosition={"CEO, Founder, Atty."}
-                teamDetails={
-                  "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
-                }
-                teamMore={"Learn More"}
-              />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <Team
-                teamImage={Person3}
-                teamName={"Patrik White"}
-                teamPosition={"CEO, Founder, Atty."}
-                teamDetails={
-                  "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
-                }
-                teamMore={"Learn More"}
-              />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <Team
-                teamImage={Person4}
-                teamName={"Kathryn Ryan"}
-                teamPosition={"CEO, Founder, Atty."}
-                teamDetails={
-                  "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
-                }
-                teamMore={"Learn More"}
-              />
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-3 mb-5">
+                <Team
+                  teamImage={Person1}
+                  teamName={"Lawson Arnold"}
+                  teamPosition={"CEO, Founder, Atty."}
+                  teamDetails={
+                    "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
+                  }
+                  teamMore={"Learn More"}
+                />
+              </div>
+              <div className="col-12 col-md-6 col-lg-3 mb-5">
+                <Team
+                  teamImage={Person2}
+                  teamName={"Jeremy Walker"}
+                  teamPosition={"CEO, Founder, Atty."}
+                  teamDetails={
+                    "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
+                  }
+                  teamMore={"Learn More"}
+                />
+              </div>
+              <div className="col-12 col-md-6 col-lg-3 mb-5">
+                <Team
+                  teamImage={Person3}
+                  teamName={"Patrik White"}
+                  teamPosition={"CEO, Founder, Atty."}
+                  teamDetails={
+                    "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
+                  }
+                  teamMore={"Learn More"}
+                />
+              </div>
+              <div className="col-12 col-md-6 col-lg-3 mb-5">
+                <Team
+                  teamImage={Person4}
+                  teamName={"Kathryn Ryan"}
+                  teamPosition={"CEO, Founder, Atty."}
+                  teamDetails={
+                    "Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
+                  }
+                  teamMore={"Learn More"}
+                />
+              </div>
             </div>
           </div>
         </div>

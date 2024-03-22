@@ -1,0 +1,38 @@
+.why-choose-us {
+    background-color: #eff2f1;
+    padding: 112px 0;
+    font-size: 14px;
+    
+}
+.why-choose-us p ,.why-choose-us span {
+    color: #6a6a6a;
+    /* font-size: 14px; */
+}
+
+
+.why-choose-us .whyChooseUsImage {
+    position: relative;
+    z-index: 1;
+}
+
+.why-choose-us .whyChooseUsImage:before {
+    position: absolute;
+    content: '';
+    width: 255px;
+    height: 217px;
+    background-image: url('../../public/images/dots-yellow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-40%, -40%);
+    z-index: -1;
+} 
+
+@media screen and (max-width:992px) {
+     .whyChooseUsImage {
+        margin-top: 100px ;
+    }
+
+    .header {
+        font-size: 8px;
+    }
+}
