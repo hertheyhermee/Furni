@@ -1,16 +1,34 @@
 .contact-us-form {
-    padding: 112px 0;
+    padding: 112px 20%;
 }
 
-.location{
+.location, .message {
+    display: flex;
+    align-items: center;
+}
+
+.location span {
     background-color: #3b5d50;
-    height: 50px;
-    width: 70px;
-    min-width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.message span {
+    background-color: #3b5d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
     border-radius: 10px;
     margin-right: 20px;
 }
 
- p {
+.location p, .message p {
+    align-self: center;
+    margin-bottom: 0;
     font-size: 14px;
+    color: #6a6a6a;
 }
