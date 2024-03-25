@@ -72,7 +72,7 @@ const Home = () => {
                 </div>
                 <Button
                   className="mt-4"
-                  text="exlpore"
+                  text="explore"
                   backgroundColor="#2f2f2f"
                   border="#2f2f2f"
                   color="#fff"

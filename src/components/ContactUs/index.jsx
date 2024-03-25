@@ -3,6 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoIosMail } from "react-icons/io";
 import "./contact.css";
+import Button from "../../Button";
 
 const ContactUs = () => {
   return (
@@ -18,7 +19,7 @@ const ContactUs = () => {
       <div className="contact-us-form">
         <div className="container">
           <div className="block">
-            <div className="row">
+            <div className="row mb-5">
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="location">
                   <span>
@@ -43,49 +44,76 @@ const ContactUs = () => {
                   <p>+1 294 3925 3939</p>
                 </div>
               </div>
-              {/* <div className="col-md-8 col-lg-8 pb-4">
-                <div className="row mb-5">
-                  <div className="col-lg-4 mb-4">
-                    <div className="d-flex align-items-center">
-                      <div className="location d-flex justify-content-center align-items-center">
-                        <FaLocationDot color={"white"} />
-                      </div>
-                      <div>
-                        <p className="mb-0 py-3">
-                          43 Raymouth Rd. Baltemoer, London 3910
-                        </p>
-                      </div>
+            </div>
+            <div className="col-sm-12">
+              <form action="">
+                <div className="row">
+                  <div className="col-sm-12 col-md-6">
+                    <div className="form-group">
+                      <label className="text-black" htmlFor="fname">
+                        First name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control formss"
+                        id="fname"
+                      />
                     </div>
                   </div>
-                  <div className="col-lg-4 mb-4">
-                    <div className="d-flex align-items-center">
-                      <div className="location d-flex justify-content-center align-items-center">
-                        <IoIosMail color={"white"} />
-                      </div>
-                      <div className="">
-                        <p className="mb-0 py-3">info@yourdomain.com</p>
-                      </div>
+                  <div className="col-sm-12 col-md-6">
+                    <div className="form-group">
+                      <label className="text-black" htmlFor="lname">
+                        Last name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control formss"
+                        id="lname"
+                      />
                     </div>
                   </div>
-                  <div className="col-lg-4 mb-4">
-                    <div className="d-flex align-items-center">
-                      <div className="location d-flex justify-content-center align-items-center">
-                        <BsFillTelephoneFill color={"white"} />
-                      </div>
-                      <div>
-                        <p className="mb-0 py-3">+1 294 3925 3939</p>
-                      </div>
+                  <div className="col-sm-12">
+                    <div className="mb-1">
+                      <label
+                        htmlFor="exampleFormControlInput1"
+                        className="form-label mb-0"
+                      >
+                        Email address
+                      </label>
+                      <input
+                        type="email"
+                        className="form-control formss"
+                        id="exampleFormControlInput1"
+                        placeholder=""
+                      />
                     </div>
+                  </div>
+                  <div className="col-sm-12">
+                    <div className="mb-3">
+                      <label
+                        htmlFor="exampleFormControlTextarea1"
+                        className="form-label mb-0"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        className="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="5"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div className="col-sm-12">
+                    <Button
+                      className="mt-4"
+                      text="Send Message"
+                      backgroundColor="#2f2f2f"
+                      border="#2f2f2f"
+                      color="#fff"
+                    />
                   </div>
                 </div>
-                <form action="">
-                    <div className="row">
-                        <div className="col-6"></div>
-                        <div className="col-6"></div>
-                        
-                    </div>
-                </form>
-              </div> */}
+              </form>
             </div>
           </div>
         </div>
