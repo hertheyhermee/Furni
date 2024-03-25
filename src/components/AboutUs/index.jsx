@@ -6,6 +6,7 @@ import Person2 from "/images/person_2.jpg";
 import Person3 from "/images/person_3.jpg";
 import Person4 from "/images/person_4.jpg";
 import WhyChooseUs from "../../WhyChooseUs";
+import Carousel from "../../Carousel";
 
 const AboutUs = () => {
   return (
@@ -70,6 +71,7 @@ const AboutUs = () => {
                   teamMore={"Learn More"}
                 />
               </div>
+              <Carousel />
             </div>
           </div>
         </div>
