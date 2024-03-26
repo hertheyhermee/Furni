@@ -8,6 +8,7 @@ import ImgGridThree from "/images/img-grid-3.jpg";
 import GreenDot from "/images/dots-green.svg";
 import CraftedWithExcellentMaterial from "../../Crafted";
 import Carousel from "../../Carousel"
+import Chairs from "../../Chairs";
 
 const Home = () => {
   return (
@@ -90,6 +91,7 @@ const Home = () => {
             <div className="col-12 col-md-6 col-lg-4"></div>
           </div>
         </div>
+        <Chairs />
         <Carousel />
       </div>
       {/* </div> */}
