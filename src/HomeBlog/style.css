@@ -1,0 +1,12 @@
+.home-blog {
+    padding: 80px 0 150px;
+}
+.view-posts {
+    color: #2f2f2f !important;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.view-posts:hover {
+    text-decoration: none;
+}

@@ -9,6 +9,7 @@ import GreenDot from "/images/dots-green.svg";
 import CraftedWithExcellentMaterial from "../../Crafted";
 import Carousel from "../../Carousel"
 import Chairs from "../../Chairs";
+import HomeBlog from "../../HomeBlog";
 
 const Home = () => {
   return (
@@ -93,6 +94,7 @@ const Home = () => {
         </div>
         <Chairs />
         <Carousel />
+        <HomeBlog />
       </div>
       {/* </div> */}
     </div>
