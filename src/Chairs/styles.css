@@ -1,0 +1,55 @@
+.chairs {
+    margin: 100px 0;
+}
+.wrapChair {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.wrapChair .chair-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 110px;
+    background-color: #DCE5E4;
+    border-radius: 30px;
+    /* border: 1px solid #000; */
+}
+.wrapChair .chair-img img {
+    position: absolute;
+    width: 125px;
+    /* height: 50%; */
+}
+.wrapChair .chair-details {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.wrapChair .chair-details h5 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wrapChair .chair-details p {
+    font-size: 14px;
+    color: #6a6a6a;
+}
+
+.wrapChair .chair-details a {
+    color: #2f2f2f;
+    font-size: 14px;
+    text-decoration: none;
+}
+.wrapChair .chair-details a:hover {
+    color: #6a6a6a;
+}
+
+@media screen and (max-width:992px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    
+}

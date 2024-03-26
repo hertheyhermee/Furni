@@ -62,3 +62,19 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width:992px) {
+    .profile-details {
+        padding: 8% !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .profile-details {
+        padding: 9% !important;
+    }
+    .profile-text {
+        font-size: 14px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        display: none !important;
+    }
+}
