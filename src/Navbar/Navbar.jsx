@@ -19,16 +19,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const pathname = location.pathname;
-    const matchingLink = links.find(link => link.path === pathname);
+    const matchingLink = links.find((link) => link.path === pathname);
     if (matchingLink) {
       setActive(matchingLink.link);
+    }
+    if (pathname === "/cart") {
+      setActive(null);
     }
   }, [location.pathname, links]);
 
   const handleClick = (getCurrentItem) => {
-    setActive(getCurrentItem);
+    if (getCurrentItem !== "/cart") {
+      setActive(getCurrentItem);
+    }
   };
-
 
   console.log(active);
 
@@ -62,7 +66,11 @@ const Navbar = () => {
           </nav>
           <div className="cart ms-lg-5 ms-6">
             <Link to="/cart">
-              <FaShoppingCart size={25} color="white" />
+              <FaShoppingCart
+                size={25}
+                color="white"
+                onClick={() => handleClick("cart")}
+              />
             </Link>
           </div>
         </div>
