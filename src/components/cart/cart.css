@@ -1,0 +1,11 @@
+.cart-form {
+    padding: 112px 0 192px 0;
+}
+.cart-form .table-img {
+    width: 200px;
+}
+.cart-form td, .cart-form th {
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
