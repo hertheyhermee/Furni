@@ -1,6 +1,8 @@
 import Hero from "../../Hero/Hero";
 import './cart.css'
 import Product1 from '../../../public/images/product-1.png'
+import Product2 from '../../../public/images/product-2.png'
+import { FaTimes } from "react-icons/fa";
 
 const Cart = () => {
   return (
@@ -23,22 +25,21 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr className="mt-5">
                       <td className="table-img"><img src={Product1} alt="" className="img-fluid" /></td>
                       <td>Product 1</td>
                       <td>$49.00</td>
                       <td>@mdo</td>
+                      <td>$49.00</td>
+                      <td><FaTimes/></td>
                     </tr>
                     <tr>
-                      <td scope="row">2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
+                      <td className="table-img"><img src={Product2} alt="" className="img-fluid" /></td>
+                      <td>Product 2</td>
+                      <td>$49.00</td>
+                      <td>@mdo</td>
+                      <td>$49.00</td>
+                      <td><FaTimes/></td>
                     </tr>
                   </tbody>
                 </table>
