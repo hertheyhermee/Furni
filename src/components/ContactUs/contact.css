@@ -1,5 +1,6 @@
 .contact-us-form {
     padding: 112px 20%;
+    background: #eff2f1;
 }
 
 .location, .message {
@@ -31,4 +32,14 @@
     margin-bottom: 0;
     font-size: 14px;
     color: #6a6a6a;
+}
+
+label {
+ font-size: 14px;   
+}
+
+.formss {
+    height: 50px;
+    border-radius: 10px;
+
 }

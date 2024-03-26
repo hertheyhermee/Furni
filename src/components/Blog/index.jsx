@@ -4,6 +4,7 @@ import Post1 from '../../../public/images/post-1.jpg'
 import Post2 from '../../../public/images/post-2.jpg'
 import Post3 from '../../../public/images/post-3.jpg'
 import RecentBlog from "../../RecentBlog";
+import Carousel from "../../Carousel"
 
 const Blog = () => {
   return (
@@ -81,6 +82,9 @@ const Blog = () => {
                     />
                 </div>
             </div>
+        </div>
+        <div className="my-5">
+        <Carousel />
         </div>
       </div>
     </div>

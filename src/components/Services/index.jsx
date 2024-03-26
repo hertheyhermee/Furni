@@ -6,6 +6,7 @@ import { FiShoppingBag } from "react-icons/fi";
 import { HiOutlineSupport } from "react-icons/hi";
 import { AiOutlineRetweet } from "react-icons/ai";
 import CraftedWithExcellentMaterial from "../../Crafted";
+import Carousel from "../../Carousel"
 
 const Services = () => {
   return (
@@ -98,6 +99,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+        <Carousel/>
       </div>
     </div>
   );
