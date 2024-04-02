@@ -1,60 +1,14 @@
 import Hero from "../../Hero/Hero";
 import "./cart.css";
-import Product1 from "../../../public/images/product-1.png";
-import Product2 from "../../../public/images/product-2.png";
-import Product3 from "../../../public/images/product-3.png";
-
-import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { Products } from "../../Product";
+import CartItem from "../CartItems/CartItem";
+// import { FaTimes } from "react-icons/fa";
+import { useContext } from "react";
+// import Shop from "../Shop";
+import { shopContext } from "../../Context/shop-context";
 
 const Cart = () => {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      productName: "Nordic Chair",
-      productImage: Product1,
-      productPrice: "49.00",
-      productQty: 1,
-      productTotal: "",
-    },
-    {
-      id: 2,
-      productName: "Kuzo Azero Chair",
-      productImage: Product2,
-      productPrice: "49.00",
-      productQty: 3,
-      productTotal: "",
-    },
-    {
-      id: 3,
-      productName: "Ergonomic Chair",
-      productImage: Product3,
-      productPrice: "30.00",
-      productQty: 7,
-      productTotal: "",
-    },
-    {
-      id: 4,
-      productName: "Exotic Sofa",
-      productImage: Product2,
-      productPrice: "56.00",
-      productQty: 2,
-      productTotal: "",
-    },
-    {
-      id: 5,
-      productName: "Level Chair",
-      productImage: Product2,
-      productPrice: "49.00",
-      productQty: 3,
-      productTotal: "",
-    },
-  ]);
-  const handleDelete = (getCurrentItem) => {
-    console.log(getCurrentItem);
-    let newProducts = products.filter((item) => item.id !== getCurrentItem);
-    setProducts(newProducts);
-  };
+  const { cartItems } = useContext(shopContext);
 
   return (
     <div>
@@ -76,44 +30,21 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {products && products.length > 0
-                      ? products.map((product) => (
-                          <tr key={product.id}>
-                            <td className="table-img">
-                              <img
-                                src={product.productImage}
-                                alt=""
-                                className="img-fluid"
-                              />
-                            </td>
-                            <td className="align-middle">
-                              {product.productName}
-                            </td>
-                            <td className="align-middle">
-                              ${product.productPrice}
-                            </td>
-                            <td className="align-middle">
-                              <select name="product-qty" id={product.id}>
-                                {product.productQty}
-                                <option value="">{product.productQty}</option>
-                              </select>
-                            </td>
-                            <td className="align-middle">
-                              $
-                              {product.productQty *
-                                parseInt(product.productPrice)}
-                            </td>
-                            <td className="align-middle">
-                              <div
-                                className="remove-btn border mx-auto"
-                                onClick={() => handleDelete(product.id)}
-                              >
-                                <FaTimes />
-                              </div>
-                            </td>
-                          </tr>
-                        ))
-                      : null}
+                    {Object.entries(cartItems).map(([id, quantity]) => {
+                      const product = Products.find(
+                        (product) => product.id === id
+                      );
+                      if (quantity > 0) {
+                        return (
+                          <CartItem
+                            key={id}
+                            data={product}
+                            quantity={quantity}
+                          />
+                        );
+                      }
+                      return null;
+                    })}
                   </tbody>
                 </table>
               </div>
