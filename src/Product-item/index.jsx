@@ -1,13 +1,33 @@
-import './style.css';
+import React, { useState } from 'react';
 import { shopContext } from '../Context/shop-context';
 import { GoPlus } from 'react-icons/go';
 import { useContext } from 'react';
+import './style.css';
 
-const ProductItem = ({ id, productName, productPrice, productImg }) => {
+const ProductItem = ({ productId, productName, productPrice, productImg, productQty, productTotal }) => {
     const { addToCart } = useContext(shopContext);
-
+    const [error, setError] = useState("");
+    const [exist, setExist] = useState(false);
+  
     const handleAddToCart = () => {
-        addToCart({ id, productName, productPrice, productImg });
+      const existingProducts = JSON.parse(localStorage.getItem("cart")) || [];
+      const existingProductIndex = existingProducts.findIndex(
+        (product) => product.productId === productId
+      );
+        
+      console.log('existingProducts:', existingProducts);
+      if (existingProductIndex !== -1) {
+        setExist(true)
+            setError("Product already exists in the cart!");
+        setTimeout(() => {
+            setExist(false)
+        }, 1000);
+        return;
+      }
+  
+      const newProduct = { productId, productName, productPrice, productImg, productQty, productTotal };
+      existingProducts.push(newProduct);
+      localStorage.setItem("cart", JSON.stringify(existingProducts));
     };
 
     return (
@@ -18,6 +38,7 @@ const ProductItem = ({ id, productName, productPrice, productImg }) => {
             <span className='d-flex justify-content-center align-items-center cartBtn' onClick={handleAddToCart}>
                 <GoPlus size={30} color='#fff' />
             </span>
+            {error && exist && <p className="text-danger">{error}</p>}
         </div>
     );
 }
