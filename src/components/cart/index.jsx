@@ -3,36 +3,41 @@ import "./cart.css";
 import { Products } from "../../Product";
 import CartItem from "../CartItems/CartItem";
 import { FaTimes } from "react-icons/fa";
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 // import Shop from "../Shop";
 import { shopContext } from "../../Context/shop-context";
 
 const Cart = () => {
-  const { cartItems, setCartItems } = useContext(shopContext);
-  const existingProducts = JSON.parse(localStorage.getItem("cart")) || [];
+  // const { cartItems, setCartItems } = useContext(shopContext);
+  let existingProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
   console.log("existingProducts:", existingProducts);
 
-  const handleRemoveFromCart = (productName) => {
-    const updatedProducts = existingProducts.filter(
-      (product) => product.productName !== productName
-    );
-    localStorage.setItem("cart", JSON.stringify(updatedProducts));
+  const [cartItems, setCartItems] = useState([]);
 
-    setCartItems((prevCartItems) => {
-      const updatedCartItems = { ...prevCartItems };
-      delete updatedCartItems[productName];
-      return updatedCartItems;
-    });
+  useEffect(() => {
+    const existingProducts = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(existingProducts);
+  }, []);
+
+  const handleRemoveFromCart = (productId) => {
+    const updatedProducts = cartItems.filter(
+      (product) => product.productId !== productId
+    );
+
+    setCartItems(updatedProducts);
+    localStorage.setItem("cart", JSON.stringify(updatedProducts));
   };
 
   const handleQuantityChange = (productName, newQuantity) => {
-    const updatedProducts = existingProducts.map((product) => {
+    const updatedProducts = cartItems.map((product) => {
       if (product.productName === productName) {
         return { ...product, productQty: newQuantity };
       }
       return product;
     });
+
+    setCartItems(updatedProducts);
     localStorage.setItem("cart", JSON.stringify(updatedProducts));
   };
 
@@ -82,8 +87,8 @@ const Cart = () => {
                         </td>
                         <td>{product.productName}</td>
                         <td>{product.productPrice}</td>
-                        <td>
-                          <div className="input-group mb-3 d-flex align-items-ce">
+                        <td className="mx-auto">
+                          <div className="input-group mx-auto d-block w-20 align-items-center">
                             <button
                               onClick={() =>
                                 handleQuantityChange(
@@ -95,7 +100,7 @@ const Cart = () => {
                               {" "}
                               -{" "}
                             </button>
-                            <input value={product.productQty} readOnly />
+                            <input value={product.productQty ? product.productQty : 1} className="input_field" readOnly />
                             <button
                               onClick={() =>
                                 handleQuantityChange(
@@ -114,7 +119,7 @@ const Cart = () => {
                         <td>{product.productPrice * product.productQty}</td>
                         <td
                           onClick={() =>
-                            handleRemoveFromCart(product.productName)
+                            handleRemoveFromCart(product.productId)
                           }
                           className="remove-btn"
                         >

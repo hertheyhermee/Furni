@@ -1,5 +1,6 @@
 .cart-form {
     padding: 112px 0 192px 0;
+    overflow: auto;
 }
 .cart-form .table-img {
     width: 100px;
@@ -31,12 +32,31 @@ option {
     height: 30px;
 }
 .table-form {
-    overflow: auto;
+    min-width: 600px;
+}
+.table-img {
+    width: 100px !important;
 }
 tbody {
     padding: 0 20px;
 }
-
+td {
+    vertical-align: middle;
+}
+.input-group {
+    box-sizing: border-box;
+}
+.input-group button {
+    border: none;
+}
+.input_field {
+    max-width: 50px;
+    border: 1px solid #6a6a6a6f;
+    text-align: center;
+}
+.input_field:focus {
+    outline: none;
+}
 .productQty {
     max-width: 120px;
 }
