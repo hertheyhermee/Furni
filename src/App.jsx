@@ -9,24 +9,27 @@ import ContactUs from "./components/ContactUs";
 import Cart from "./components/cart";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "./Footer";
+import { ShopContextProvider } from "./Context/shop-context";
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ShopContextProvider>
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ShopContextProvider>
   );
 };
 

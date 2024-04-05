@@ -56,6 +56,9 @@
     opacity: 0;
     transition: all  .3s ease-in-out;
 }
+.cartBtn:hover {
+    cursor: pointer;
+}
 
 .product-card:hover .cartBtn {
     opacity: 1;

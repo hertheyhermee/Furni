@@ -1,76 +1,27 @@
 import Hero from "../../Hero/Hero";
 import "./shop.css";
 import ProductItem from "../../Product-item";
-import product1 from "../../../public/images/product-1.png";
-import product2 from "../../../public/images/product-2.png";
-import product3 from "../../../public/images/product-3.png";
+import { Products } from "../../Product";
 
 const Shop = () => {
- 
   return (
     <div className="shop-section">
-      <div>
-        <Hero header={"Shop"} />
-      </div>
+      <Hero header={"Shop"} />  
       <div className="shops_section">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product3}
-                productName = "Nordic Chair"
-                productPrice = "50.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product1}
-                productName = "Nordic Chair"
-                productPrice = "50.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product2}
-                productName = "Nordic Chair"
-                productPrice = "78.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product3}
-                productName = "Nordic Chair"
-                productPrice = "43.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product3}
-                productName = "Nordic Chair"
-                productPrice = "50.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product1}
-                productName = "Nordic Chair"
-                productPrice = "50.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product2}
-                productName = "Nordic Chair"
-                productPrice = "78.00"
-               />
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-5">
-              <ProductItem 
-                productImg = {product3}
-                productName = "Nordic Chair"
-                productPrice = "43.00"
-               />
-            </div>
+            {Products.map(product => (
+              <div key={product.id} className="col-12 col-md-6 col-lg-3 mb-5">
+                <ProductItem
+                  productId={product.id}
+                  productImg={product.productImage}
+                  productName={product.productName}
+                  productPrice={product.productPrice}
+                  productQty={product.productQty}
+                  productTotal={product.productTotal}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
