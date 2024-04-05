@@ -9,6 +9,7 @@ import {
 import Sofa from "../../public/images/sofa.png";
 import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
+import axios from "axios";
 
 const Icon = ({ href, social }) => {
   return (
@@ -25,6 +26,20 @@ const Footer = () => {
     { icon: <FaInstagram />, link: "http://instagram.com" },
     { icon: <FaLinkedin />, link: "https://www.linkedin.com" },
   ]);
+  const [inputs, setInputs] = useState({})
+  const [value, setValue] = useState("")
+  const handleChange = (event) => {
+    const name = event.target.name
+    const value = event.target.value
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+
+    axios.post('http://localhost/api/subscribe/save', inputs);
+  }
 
   return (
     <div className="footer py-5">
@@ -37,26 +52,30 @@ const Footer = () => {
               </span>
               Subscribe to Newsletter
             </p>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className="row gap-0 subscribe mt-3">
                 <div className="col-12 col-sm-5 mb-3 mb-sm-0">
                   <input
                     type="text"
                     placeholder="Enter your name"
                     className="p-3"
+                    name="name"
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="col-12 col-sm-5 mb-3 mb-sm-0">
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Enter your email"
+                    name="email"
+                    onChange={handleChange}
                     className="px-3"
                   />
                 </div>
                 <div className="col-2">
-                  <div className="send d-flex justify-content-center align-items-center">
+                  <button className="send d-flex justify-content-center align-items-center">
                     <IoIosSend size={30} color={"white"} />
-                  </div>
+                  </button>
                 </div>
               </div>
             </form>

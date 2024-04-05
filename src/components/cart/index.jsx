@@ -105,7 +105,7 @@ const Cart = () => {
                             </td>
                             <td className="align-middle">
                               <div
-                                className="remove-btn border mx-auto"
+                                className="remove-btn mx-auto"
                                 onClick={() => handleDelete(product.id)}
                               >
                                 <FaTimes />
