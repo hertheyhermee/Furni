@@ -31,7 +31,7 @@ const ProductItem = ({
         setExist(false);
       }, 2000);
       return;
-    } else {
+    } else {   
       setExist(true);
       setSuccess("Item added to cart successfully!");
       setTimeout(() => {
