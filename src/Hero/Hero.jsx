@@ -31,12 +31,14 @@ const Hero = ({ header, subHeader }) => {
                     backgroundColor={"#f9bf29"}
                     color={"#2f2f2f"}
                     border={"1px solid #f9bf29"}
+                    to="/shop"
                   />
                   <Button
                     text={"explore"}
                     backgroundColor={"transparent"}
                     color={"#fff"}
                     border={"1px solid #ffffff7f"}
+                    to="/shop"
                   />
                   <div className="dot-container d-flex">
                     {[...Array(72)].map((_, index) => {

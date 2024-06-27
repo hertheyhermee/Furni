@@ -2,8 +2,14 @@ import { useState, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { FaPerson } from "react-icons/fa6";
+import { CgProfile } from "react-icons/cg";
+import { useStateContext } from "../Context/context";
+import Button from "../Button";
 
 const Navbar = () => {
+  const { token } = useStateContext();
+
   const [sideBar, setSideBar] = useState(false);
   const [active, setActive] = useState("home");
   const [links] = useState([
@@ -23,13 +29,13 @@ const Navbar = () => {
     if (matchingLink) {
       setActive(matchingLink.link);
     }
-    if (pathname === "/cart") {
+    if (pathname === "/cart" || pathname === "/profile") {
       setActive(null);
     }
   }, [location.pathname, links]);
 
   const handleClick = (getCurrentItem) => {
-    if (getCurrentItem !== "/cart") {
+    if (getCurrentItem !== "/cart" || getCurrentItem !== "/profile") {
       setActive(getCurrentItem);
     }
   };
@@ -64,7 +70,7 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-          <div className="cart ms-lg-5 ms-6">
+          <div className="cart ms-lg-5 ms-6 d-flex justify-content-between gap-5">
             <Link to="/cart">
               <FaShoppingCart
                 size={25}
@@ -72,6 +78,23 @@ const Navbar = () => {
                 onClick={() => handleClick("cart")}
               />
             </Link>
+            {token ? (
+              <Link to="/profile">
+                <CgProfile
+                  size={25}
+                  color="white"
+                  onClick={() => handleClick()}
+                />
+              </Link>
+            ) : <Link to="/login" style={{
+              textDecoration: "none",
+              background: "#f9bf29",
+              color: "#2f2f2f",
+              padding: "5px 20px",
+              borderRadius: "5px",
+              border: "none",
+              fontWeight: "600",
+            }}>Login</Link> }
           </div>
         </div>
       </div>

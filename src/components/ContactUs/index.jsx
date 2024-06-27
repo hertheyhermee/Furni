@@ -76,7 +76,7 @@ const ContactUs = () => {
                     <div className="mb-1">
                       <label
                         htmlFor="exampleFormControlInput1"
-                        className="form-label mb-0"
+                        className="form-label"
                       >
                         Email address
                       </label>
@@ -92,7 +92,7 @@ const ContactUs = () => {
                     <div className="mb-3">
                       <label
                         htmlFor="exampleFormControlTextarea1"
-                        className="form-label mb-0"
+                        className="form-label"
                       >
                         Message
                       </label>
@@ -103,7 +103,7 @@ const ContactUs = () => {
                       ></textarea>
                     </div>
                   </div>
-                  <div className="col-sm-12">
+                  <div className="col-sm-12 mt-5">
                     <Button
                       className="mt-4"
                       text="Send Message"

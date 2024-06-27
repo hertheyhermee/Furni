@@ -3,6 +3,8 @@ import { shopContext } from "../Context/shop-context";
 import { GoPlus } from "react-icons/go";
 import { useContext } from "react";
 import "./style.css";
+import { useStateContext } from "../Context/context";
+import { Navigate } from "react-router-dom";
 
 const ProductItem = ({
   productId,
@@ -13,10 +15,14 @@ const ProductItem = ({
   productTotal,
 }) => {
   const { addToCart } = useContext(shopContext);
+  const { token } = useStateContext();
   const [error, setError] = useState("");
   const [exist, setExist] = useState(false);
   const [success, setSuccess] = useState("");
+  const [redirectToLogin, setRedirectToLogin] = useState(false)
 
+ 
+  
   const handleAddToCart = () => {
     const existingProducts = JSON.parse(localStorage.getItem("cart")) || [];
     const existingProductIndex = existingProducts.findIndex(
@@ -51,6 +57,15 @@ const ProductItem = ({
     localStorage.setItem("cart", JSON.stringify(existingProducts));
   };
 
+  const handleReroute = () => {
+    console.log("route clicked");
+    setRedirectToLogin(true)
+  };
+
+  if(redirectToLogin) {
+    return <Navigate to="/login" />
+  }
+
   return (
     <div className="product-card d-flex justify-content-center flex-column">
       <img src={productImg} alt="" className="product-img mb-4 img-fluid" />
@@ -60,14 +75,15 @@ const ProductItem = ({
       <p className="product-price">${productPrice}</p>
       <span
         className="d-flex justify-content-center align-items-center cartBtn"
-        onClick={handleAddToCart}
+        onClick={token ? handleAddToCart : handleReroute}
       >
         <GoPlus size={30} color="#fff" />
       </span>
       {error && exist ? (
         <p className="text-danger">{error}</p>
-      ) : success && exist && (
-        <p className="text-success fw-bold fs-6">{success}</p>
+      ) : (
+        success &&
+        exist && <p className="text-success fw-bold fs-6">{success}</p>
       )}
     </div>
   );

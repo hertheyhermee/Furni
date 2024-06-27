@@ -73,11 +73,12 @@ const Home = () => {
                   </div>
                 </div>
                 <Button
-                  className="mt-4"
+                  className="mt-5"
                   text="explore"
                   backgroundColor="#2f2f2f"
                   border="#2f2f2f"
                   color="#fff"
+                  to="/shop"
                 />
               </div>
             </div>

@@ -1,0 +1,12 @@
+.chair {
+    animation: 3s ease slide alternate-reverse infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}

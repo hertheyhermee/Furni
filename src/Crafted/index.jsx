@@ -21,6 +21,7 @@ const CraftedWithExcellentMaterial = () => {
               color="white"
               backgroundColor="#2f2f2f"
               border="#2f2f2f"
+              to="/shop"
             />
           </div>
         </div>
